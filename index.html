@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTH TEAM</title>
+    <title>Build Websites & Apps | Business Growth & Branding | GTH INNOVATIONS </title>
+    <meta name="description" content="We build professional websites, mobile apps, and digital solutions to grow your business and brand. Get expert development and branding services today!">
+    <meta name="keywords" content="web development, app development, business growth, brand building, digital marketing, startup solutions">
+    <meta property="og:title" content="Build Websites & Apps | Grow Your Business & Brand">
+<meta property="og:description" content="Expert web and app development services. Build your brand and grow your business with our solutions.">
+<meta property="og:image" content="https://gth.guru/images/gthlogo.jpg">
+<meta property="og:url" content="https://gth.guru">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Build Websites & Apps | Business Growth & Branding">
+<meta name="twitter:description" content="We create powerful websites and apps to help businesses grow and succeed.">
+<meta name="twitter:image" content="https://gth.guru/images/gthlogo.jpg">
+<link rel="canonical" href="https://gth.guru">
+    
+    
+    
+    
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GTH INNOVATIONS",
+  "url": "https://gth.guru",
+  "logo": "https://gth.guru/images/gthlogo.png",
+  "sameAs": [
+    "https://x.com/gthinnovations",
+    "https://www.linkedin.com/in/gth-team-22097b354",
+    "https://www.facebook.com/yourpage"
+  ],
+  "description": "We build websites, apps, and brands for businesses looking to grow business in the digital world."
+}
+</script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function(){
@@ -15,36 +51,50 @@
         })();
 
         function sendEmail(event) {
-            event.preventDefault();
+    event.preventDefault();
 
-            // Corrected ID names
-            let fullName = document.getElementById("fullName").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let message = document.getElementById("message").value.trim();
+    // Get form elements
+    let fullName = document.getElementById("fullName").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let sendBtn = document.getElementById("sendBtn");
+    let loading = document.getElementById("loading");
 
-            // Validate Inputs
-            if (!fullName || !email || !message) {
-                alert("⚠️ Please fill out all fields before submitting.");
-                return;
-            }
+    // Validate Inputs
+    if (!fullName || !email || !message) {
+        alert("⚠️ Please fill out all fields before submitting.");
+        return;
+    }
 
-            // EmailJS parameters - Ensure these match your EmailJS template fields
-            let emailParams = {
-                from_name: fullName,  // Must match your EmailJS template variable
-                reply_to: email,      // Ensure this matches the variable in your EmailJS template
-                message: message
-            };
+    // Show loader and disable send button
+    loading.style.display = "block";
+    sendBtn.disabled = true;
+    sendBtn.innerText = "Sending...";
 
-            emailjs.send("service_i6du7p1", "template_2i5376e", emailParams)
-                .then(response => {
-                    alert("✅ Success! Your message has been sent. We will get back to you soon.");
-                    document.getElementById("contactForm").reset();
-                })
-                .catch(error => {
-                    console.error("Email failed:", error);
-                    alert("❌ Oops! Something went wrong. Please try again.");
-                });
-        }
+    // EmailJS parameters
+    let emailParams = {
+        from_name: fullName,
+        reply_to: email,
+        message: message
+    };
+
+    emailjs.send("service_i6du7p1", "template_2i5376e", emailParams)
+        .then(response => {
+            alert("✅ Success! Your message has been sent.");
+            document.getElementById("contactForm").reset();
+        })
+        .catch(error => {
+            console.error("Email failed:", error);
+            alert("❌ Oops! Something went wrong.");
+        })
+        .finally(() => {
+            // Hide loader and reset send button
+            loading.style.display = "none";
+            sendBtn.disabled = false;
+            sendBtn.innerText = "Send Message";
+        });
+}
+        
     </script>
 </head>
 <body>
@@ -75,10 +125,11 @@
                 </ul>
 
                 <div class="box-icons">
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="#https://x.com/gthinnovations"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.tiktok.com/@gth.innovations?_t=ZM-8uQZUAnAKIB&_r=1"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.linkedin.com/in/gth-team-22097b354"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573810923222"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/gthinnovations?igsh=MTZ4MGVjYWJweTIzOA=="><i class="bx bxl-instagram"></i></a>
                 </div>
 
                 <div class="menu-icon"><i class="bx bx-menu"></i></div>
@@ -99,10 +150,12 @@
             </ul>
 
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                <a href="#https://x.com/gthinnovations"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.tiktok.com/@gth.innovations?_t=ZM-8uQZUAnAKIB&_r=1"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.linkedin.com/in/gth-team-22097b354"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573810923222"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/gthinnovations?igsh=MTZ4MGVjYWJweTIzOA=="><i class="bx bxl-instagram"></i></a>
+               
             </div>
         </div>
 
@@ -298,14 +351,16 @@ We craft websites, AI chatbots, and financial tech solutions to elevate your bus
 
             <div class="social-box autoBlur">
                 <a href="#"><i class="bx bxs-phone-call"></i> +234 708 566 5759</a>
-                <a href="#"><i class="bx bxl-twitter"></i> Contact example.com</a>
-                <a href="#"><i class="bx bxl-linkedin-square"></i> Contact example.com</a>
+                <a href="https://x.com/gthinnovations"><i class="bx bxl-twitter"></i> GTH INNOVATIONS</a>
+                <a href="https://www.linkedin.com/in/gth-team-22097b354"><i class="bx bxl-linkedin-square"></i> GTH INNOVATIONS</a>
 
                 <div class="social-icons">
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="#https://x.com/gthinnovations"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.tiktok.com/@gth.innovations?_t=ZM-8uQZUAnAKIB&_r=1"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.linkedin.com/in/gth-team-22097b354"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573810923222"><i class="bx bxl-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/gthinnovations?igsh=MTZ4MGVjYWJweTIzOA=="><i class="bx bxl-instagram"></i></a>
+               
                 </div>
             </div>
 
@@ -323,9 +378,17 @@ We craft websites, AI chatbots, and financial tech solutions to elevate your bus
     
     <p>Your Message</p>
     <textarea id="message" placeholder="Send Message to..." rows="3"></textarea>
-    
-    <button type="submit"><i class="bx bx-send"></i> Send Message</button>
-  </form>
+    <!-- Send Button -->
+    <button type="submit" id="sendBtn">
+        Send Message
+    </button>
+
+    <!-- Loader (Hidden by Default) -->
+    <div id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Sending message...</p>
+    </div>
+</form>
 </div>
         </section>
 

@@ -6,6 +6,31 @@ body{
     
 }
 
+/* Loader Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #72a1de;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+/* Keyframes for rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Center the loader */
+#loading {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
 /* Preloader styles */
 #preloader {
     position: fixed;
@@ -305,7 +330,7 @@ header ul a {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: ;
+    
     margin-top: 150px;
 }
 

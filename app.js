@@ -46,3 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+window.addEventListener('resize', function () {
+    if (window.innerHeight < 500) {  // Adjust this value based on your needs
+        document.querySelector("footer").style.display = "none";
+    } else {
+        document.querySelector("footer").style.display = "flex";
+    }
+});
