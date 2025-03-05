@@ -3,7 +3,7 @@
 =======
 
 <a href="https://youtu.be/moRqo158NGc?si=DAIbiOkKnHknEQVJ" target="_blank">
-  <img src="./images/thumbnail.png" alt="Thumbnail"/>
+  <img src="./images/thumbnail.webp" alt="Thumbnail"/>
 </a>
 
 
@@ -19,7 +19,7 @@
 
 ---
 ## Watch the full tutorial on YouTub
-<a href="https://youtu.be/moRqo158NGc?si=DAIbiOkKnHknEQVJ">
-  <img src="./images/youtube-ligo.png" alt="youtube"/>
+<a href="#">
+  <img src="./images/youtube-ligo.webp" alt="youtube"/>
 </a>
 >>>>>>> 2b8ec06 (Fixing owernship issue)
