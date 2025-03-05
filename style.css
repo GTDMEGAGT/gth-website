@@ -6,6 +6,63 @@ body{
     
 }
 
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Dark background */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+/* Glowing Text Effect */
+.glowing-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #72a1de; /* Light blue glow color */
+    text-align: center;
+    text-transform: uppercase;
+    animation: glow 1.5s infinite alternate;
+    margin-bottom: 20px; /* Space between text and loader */
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #72a1de, 0 0 10px #72a1de, 0 0 15px #72a1de;
+    }
+    100% {
+        text-shadow: 0 0 10px #72a1de, 0 0 20px #72a1de, 0 0 30px #72a1de;
+    }
+}
+
+/* Spinning Loader (Circular Animation) */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #72a1de; /* Loader color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide preloader when the page is loaded */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 html{
     scroll-behavior: smooth;
 }
