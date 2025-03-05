@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTH TEAM</title>
     <link rel="stylesheet" href="style.css">
@@ -126,7 +127,7 @@ We craft websites, AI chatbots, and financial tech solutions to elevate your bus
             </div>
 
             <div class="hero-vid-box">
-                <video class="autoBlur" autoplay loop muted plays-inline src="./videos/hero-video.mp4" type="video/mp4"></video>
+                <video class="autoBlur" autoplay loop muted plays-inline src="./videos/hero-video-2.mp4" type="video/mp4"></video>
             </div>
 
             <div class="scroll-down"> </div>
@@ -340,6 +341,19 @@ We craft websites, AI chatbots, and financial tech solutions to elevate your bus
         setTimeout(() => preloader.style.display = "none", 1000); // Fully remove after 1 sec
     });
 </script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+      .then((registration) => {
+        console.log("Service Worker registered with scope:", registration.scope);
+      })
+      .catch((error) => {
+        console.log("Service Worker registration failed:", error);
+      });
+  }
+</script>
+
     <script src="./app.js"></script>
 </body>
-            </html>
+</html>
